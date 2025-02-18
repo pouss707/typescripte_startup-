@@ -129,3 +129,13 @@ function extractElementsBetweenPositions (elements:number[],n:number,m:number):n
  for (let i=n ; i<= m; i++) r.push(elements[i]);
  return r;
 }
+
+
+function extractElementsBetweenPositionsv2 (elements:number[],n:number,m:number):number[]{
+  const max:number = Math.max(n,m);
+  const min:number = Math.min(n,m);
+ return elements.slice(min,max+1);
+}
+
+console.log(extractElementsBetweenPositions([1,2,3,4,5,6,7,8,9,5,1,4,2],1,5))
+console.log(extractElementsBetweenPositionsv2([1,2,3,4,5,6,7,8,9,5,1,4,2],2,8))
