@@ -119,3 +119,13 @@ users.filter(isUser).forEach(logPerson);
 
 console.log("\n -- Admins  : ");
 users.filter(isAdmin).forEach(logPerson);
+
+
+
+function extractElementsBetweenPositions (elements:number[],n:number,m:number):number[]{
+  const max:number = Math.max(n,m);
+  const min:number = Math.min(n,m);
+  const r:number[] = [];
+ for (let i=n ; i<= m; i++) r.push(elements[i]);
+ return r;
+}
